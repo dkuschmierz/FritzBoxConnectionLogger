@@ -55,6 +55,7 @@ def main(args):
             }
             
             csvWriter.writerow(dataDict)
+            csvFile.flush()
             
             if args.verbose:               
                 print(" {0:<19} | {1:<7} | {2:<4} | {3:<13} | {4:<15} | {5:<13} | {6:<15} |  {7:<15} | {8:<18} | {9:<7} | {10:<8} | {11:<7} | {12:<8}".format(datetime.now().strftime("%d.%m.%Y %H:%M:%S"),fs.is_connected, fs.is_linked, curstream_up, curstream_down, maxstream_up , maxstream_down, line_up, line_down, snr_upstream, snr_downstream, att_upstream, att_downstream))
