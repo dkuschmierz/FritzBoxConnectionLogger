@@ -70,7 +70,7 @@ if __name__ == '__main__':
     parser.add_argument('-o', '--output', type=str , default= "./FritzConnectionLog.csv", dest= 'output', help='Path to output file. Defaults to ./FritzConnectionLog.csv')
     parser.add_argument('-p', '--password', dest= 'password', help='Password for login')
     parser.add_argument('-P', '--port', dest= 'port', help='Port for connection')
-    parser.add_argument('-t', '--timeout', dest= 'timeout', help='Timeout for establashing connection')
+    parser.add_argument('-t', '--timeout', type=float, dest= 'timeout', help='Timeout for establashing connection')
     parser.add_argument('-u', '--user', dest= 'user', help='Username for login')
     parser.add_argument('-v', '--verbose', action="store_true", default=False, dest= 'verbose', help='Print data also to console')
     
