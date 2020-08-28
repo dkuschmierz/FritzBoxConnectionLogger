@@ -71,6 +71,9 @@ def main(args):
                     'Timestamp': datetime.now().strftime("%d.%m.%Y %H:%M:%S"),
                     'PhyLink' : "NO CONNECTION TO ROUTER",
                 }
+                csvWriter.writerow(dataDict)
+                csvFile.flush()
+                
                 fc = None
             
             time.sleep(args.cycleTime)
